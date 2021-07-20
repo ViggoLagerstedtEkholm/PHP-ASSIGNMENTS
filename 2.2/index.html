@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="'en'" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h3>POST form</h3>
+    <form method="post" action="response.php">
+      <h3>Name</h3>
+      Name: <input type="text" name="name">
+      <br>
+      <hr>
+      <h3>Email</h3>
+      Email: <input type="text" name="email">
+      <br>
+      <hr>
+      <h3>Password</h3>
+      Password: <input type="password" name="password">
+      <br>
+      <hr>
+      <select name="select_items" size="1">
+        <option value="value1"> Value1</option>
+        <option value="value2"> value2</option>
+      </select>
+      <br>
+      <hr>
+      <input type="checkbox" name="check_box" value="ON">
+      <br>
+      <hr>
+      <input type="submit">
+    </form>
+
+    <hr>
+
+    <h3>GET form</h3>
+
+    <form method="get" action="response.php">
+      <h3>Name</h3>
+      Name: <input type="text" name="name">
+      <br>
+      <hr>
+      <h3>Email</h3>
+      Email: <input type="text" name="email">
+      <br>
+      <hr>
+      <input type="submit">
+    </form>
+  </body>
+</html>

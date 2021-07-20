@@ -1,0 +1,35 @@
+
+<!doctype html>
+<html lang="se">
+  <head>
+    <meta charset="utf-8">
+    <title>Exempel</title>
+  </head>
+  <body>
+    <h1>Startsida på webbplatsen</h1>
+    <p>
+      Slumpmässigt sessions-id (---session-id---) bakas in i interna länkar och formulär. Ladda om sidan för att skapa ett nytt sessions-id.
+    </p>
+    <p>
+      <a href="example2.php?session-id=---session-id---">En intern länk</a>
+    </p>
+    <p>
+      <a href="example2.php?session-id=---session-id---">En intern länk till</a>
+    </p>
+    <p>
+      <a href="http://su.se/">En extern länk</a>
+    </p>
+    <p>
+      Ett formulär:
+    </p>
+    <form method="get" action="example2.php">
+      <p>
+        Namn: <input type="text" name="name" />
+      </p>
+      <p>
+        <input type="hidden" name="session-id" value="---session-id---">
+        <input type="submit" value="Sänd" name="button" />
+      </p>
+    </form>
+  </body>
+</html>
