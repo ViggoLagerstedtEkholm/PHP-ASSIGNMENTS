@@ -20,7 +20,7 @@ function perform_search($URL, $depthValue, $depth, $word, $index){
     return;
   }
 
-  echo "\nLevel: " . $depthValue . ", link: " . $index . "\n";
+  echo "\nLevel: " . $depthValue + 1 . ", link: " . $index . "\n";
 
   //Read the website into a string.
   $html = @file_get_contents($URL);
