@@ -5,12 +5,12 @@ $word = $_POST["word"];
 $depth = $_POST["depth"];
 
 $index = 1;
+$total_links = 0;
 $sites_with_word = array();
 $sites_without_word = array();
 
 //Start the recusive call with 0 depth.
 perform_search($URL, 0, $depth, $word, $index, $sites_with_word, $sites_without_word);
-
 print_summary($word, $sites_with_word, $sites_without_word);
 
 //Recursive function that will reach the base case when the given depth value is reached.
@@ -48,9 +48,14 @@ function perform_search($URL, $depthValue, $depth, $word, $index){
 
     echo "Det finns " . count($uniqueLinks) . " länkar på " . $URL . "\n\n";
 
+    //Loop through every link and perform a recursive call.
     foreach($uniqueLinks as $finalLink){
+      //Check if we should echo all the links in this current HTML file.
+      if(isset($_POST["display_links"]) && $_POST["display_links"] == "Yes"){
+        echo $finalLink . "\n";
+      }
       //Recursive call for each link in this website.
-      perform_search($finalLink, $depthValue++, $depth, $word, ++$index);
+      perform_search($finalLink, $depthValue + 1, $depth, $word, ++$index);
     }
   }else{
     echo "<// WARNING: >\n";
