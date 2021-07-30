@@ -1,0 +1,45 @@
+Understanding the basic authentication header:
+What we need to do when implementing HTTP basic authentication is the to use the built in header('WWW-Authenticate: Basic realm = "Example"');
+
+To understand what this header does we to know the different subparts.
+
+The template looks like this:
+WWW-Authenticate: <type> realm=<realm>[, charset="UTF-8"]
+
+WWW-Authenticate - This is a HTTP response header that defines the authentication method that should be used to gain access to a set of resources.
+
+<type> - This is the authentication type, we use "Basic" in the assignment for basic authentication.
+
+<realm> - This is the description of the protected area, in my code I used "Example" as my realm. This simply means any other page with the same realm should work with the defined credentials.
+
+Understanding the encoding and process:
+1. The username and password is combined with a colon (:) that separates them.
+2. The combined string is encoded into a octet sequence.
+3. The combined string is encoded using Base64.
+4. The authorization method is then prepared to the encoded string.
+
+Now that we understand this process we can look in the network inspection tool in chrome and see the authentication header "Authorization: Basic dGVzdDoxMjM0NQ==", this is test:12345 in Base64!
+
+Looking at the code:
+
+header('WWW-Authenticate: Basic realm = "Example"');
+- Displays a challenge form with username and password.
+
+header('HTTP/1.0 401 Unauthorized');
+- We did not authenticate, we did not gain access.
+
+die ("Not authorized");
+- Show the user that authentication failed.
+
+Where does the authentication credentials save?:
+$_SERVER['PHP_AUTH_USER'];
+- The authentication username.
+
+$_SERVER['PHP_AUTH_PW'];
+- The authentication password.
+
+We can use these 2 global variables and compare them with the user inputs.
+
+Why does the authentication work when we insert the right username and password?:
+When we insert username and password to the challenge form we run the PHP script again, but this time the global variables PHP_AUTH_USER and PHP_AUTH_PW will be set. If these 2 variables matches
+the preset username and password we simply use conditional rendering that will display the user name instead of the authorization form.
