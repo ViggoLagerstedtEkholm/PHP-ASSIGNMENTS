@@ -7,7 +7,7 @@ $preset_password = "12345";
 $user = $_SERVER['PHP_AUTH_USER'];
 $pass = $_SERVER['PHP_AUTH_PW'];
 
-//Check if the preset username and password match the username and password in the server array.
+//Check if the preset username and password match the username and password from the $_SERVER variables.
 if (!(($preset_username == $user) && ($preset_password == $pass))) {
   //Show the challange form using WWW-authenticate, here we use "basic realm = "Example".
   header('WWW-Authenticate: Basic realm = "Example"');
