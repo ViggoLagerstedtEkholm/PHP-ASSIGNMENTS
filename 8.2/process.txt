@@ -9,7 +9,8 @@ When we create the authentication popup we need to calculate 3 different values 
 
 With all of these values we can compose the header: header(sprintf('WWW-Authenticate: Digest realm="%s", nonce="%s", opaque="%s"', $realm, $nonce, $opaque));
 
-When the user submits the authentication form the username and password gets hashed and can't be seen in plain text (if we use wireshark/packet sniffer) we need parse the digest when we receive the form data and save the following information into variables:
+When the user submits the authentication form the username and password gets hashed and can't be seen in plain text (if we use wireshark/packet sniffer).
+We need parse the digest when we receive the form data and save the following information into variables:
 $URI = $digest_parse['uri'];
 - authentication uri.
 
