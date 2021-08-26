@@ -12,6 +12,6 @@ foreach ($globalVariables as $globalVariableName => $global) {
 
     //Go through all attributes in the global variable.
     foreach ($global as $key => $value) {
-        echo $key . ':' . $value . "\n";
+        echo $key . ':  ' . $value . "\n";
     }
 }
