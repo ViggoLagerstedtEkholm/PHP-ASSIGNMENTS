@@ -24,8 +24,8 @@ try {
     $mail->Host = 'smtp.gmail.com';
     $mail->Port = 465;
     $mail->SMTPAuth = true;
-    $mail->Username = 'mail';
-    $mail->Password = 'password';
+    $mail->Username = 'testarimapmail@gmail.com';
+    $mail->Password = 'testarIMAP123';
     $mail->SMTPSecure = 'ssl';
     $mail->Body = $message . ', Observera! Detta meddelande är sänt från ett formulär på Internet och avsändaren kan vara felaktig!';
 
