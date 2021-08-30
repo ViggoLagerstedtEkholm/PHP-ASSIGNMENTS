@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <h3> Enter settings </h3>
+
+    <form method="post" action="AddFeed.php">
+      <input type="text" name="URL" placeholder="Enter RSS feed URL:">
+      <input type="text" name="display_limit" placeholder="Display limit">
+      <input type="submit" value="Submit" name="submit">
+    </form>
+
+    <h3> RSS feed overview </h3>
+
+    <!--===entries===-->
+    <form method="post" action="DeleteFeed.php">
+      <input type="text" name="URLDisplay" value="---URL---" disabled>
+      <input type="text" name="displayCount" value="---display_index---" disabled>
+      <input type="text" name="ID" value="---ID---" hidden>
+      <input type="submit" name="submit" value="Delete feed">
+      <br>
+    </form>
+    <!--===entries===-->
+
+    <h1 class="FeedTitle">---Title---</h1>
+
+    <!--===entries===-->
+    <p>
+      <h1>
+        <strong>Title: </strong> ---title---
+      </h1>
+    </p>
+    <p>
+      <strong>link: </strong> ---link--- <br>
+      <strong>description: </strong> ---description--- <br>
+      <strong>post date: </strong> ---post_date---<br>
+      <strong>publish date: </strong> ---publish_date---<br>
+    </p>
+    <hr />
+    <!--===entries===-->
+
+  </body>
+</html>
