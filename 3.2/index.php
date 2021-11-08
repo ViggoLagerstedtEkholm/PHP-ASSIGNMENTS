@@ -1,4 +1,9 @@
 <?php
+/**
+ * This script displays the $_SERVER and $_ENV key value pairs.
+ * @author Viggo Lagerstedt Ekholm
+ */
+
 $globalVariables = array(
     '$_SERVER' => $_SERVER, '$_ENV' => $_ENV,
 );
@@ -18,8 +23,8 @@ foreach ($globalVariables as $globalVariableName => $global) {
         //We first replace all ---name--- with the key.
         //We then use this newly created string to replace the ---value---.
         //What we have left is 1 row that contains ---name--- -> ---value--- mapping.
-         $temp = str_replace('---name---', $key, $html_pieces[1]);
-         echo str_replace('---value---', $value, $temp);
+        $temp = str_replace('---name---', $key, $html_pieces[1]);
+        echo str_replace('---value---', $value, $temp);
     }
 }
 
