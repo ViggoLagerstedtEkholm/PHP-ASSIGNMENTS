@@ -20,4 +20,3 @@ if (!(($preset_username == $user) && ($preset_password == $pass))) {
 //If we arrive here that means we succesfully matched the preset username and password with $_SERVER['PHP_AUTH_USER'] and $_SERVER['PHP_AUTH_PW'].
 //This means we did not enter the if statement on line 11, we are authorized and we simply print the $user string.
 echo "<p>You athenticated as: $user </p>";
-?>
