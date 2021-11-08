@@ -1,59 +1,64 @@
 <!doctype html>
 <html lang="se">
-  <head>
+<head>
     <meta charset="utf-8">
     <title>Exempel</title>
-  </head>
-  <h3>Brand new testing Google account that has been created (Use it if you want to try the email retrieval):</h3>
-  <p>Username: testarimapmail@gmail.com</p>
-  <p>Password: testarIMAP123</p>
-  <p>Server: imap.gmail.com</p>
-  <p>Port: 993 </p>
-  <body>
-    <form method="post" action="index.php">
-      <p>
+</head>
+<body>
+<h3>Brand new testing Google account that has been created (Use it if you want to try the email retrieval):</h3>
+<p>Username: testarimapmail@gmail.com</p>
+<p>Password: testarIMAP123</p>
+<p>Server: imap.gmail.com</p>
+<p>Port: 993 </p>
+<form method="post" action="index.php">
+    <p>
         <input type="text" name="username" placeholder="Användarnamn"/>
-      </p>
-      <p>
+    </p>
+    <p>
         <input type="password" name="password" placeholder="Lösenord"/>
-      </p>
-      <p>
+    </p>
+    <p>
         <input type="text" name="mailserver_host" placeholder="Epostserver värd"/>
-      </p>
-      <p>
+    </p>
+    <p>
         <input type="text" name="mailserver_port" placeholder="Epostserver port"/>
-      </p>
-      <p>
+    </p>
+    <p>
         <input type="submit" name="push_button" value="Hämta e-brev"/>
-      </p>
-    </form>
+    </p>
+</form>
+<!--===entries===-->
 
-    <hr />
+<hr/>
 
+    <hr>
+
+    <p>
+        <strong>Email number: </strong> ---no---
+    </p>
+    <p>
+        <strong>date: </strong> ---date--- <br>
+        <strong>from: </strong> ---from--- <br>
+        <strong>subject: </strong> ---subject---<br>
+    </p>
+    <p>
+        <strong>message: </strong> ---body---
+    </p>
+
+    <p>
+        Attachments:
+    </p>
     <!--===entries===-->
     <p>
-      <strong>Email number: </strong> ---no---
+        <b>
+            <u>
+                <a href="download.php?file=---LINK---"> ---LINK--- </a>
+            </u>
+        </b>
     </p>
-    <p>
-      <strong>date: </strong> ---date--- <br>
-      <strong>from: </strong> ---from--- <br>
-      <strong>subject: </strong> ---subject---<br>
-    </p>
-    <p>
-      <strong>message: </strong> ---body---
-    </p>
-    <hr />
+
     <!--===entries===-->
+<!--===entries===-->
 
-    <!--===attachment===-->
-    <p>
-      <b>
-        <u>
-          <a href="download.php?file=---LINK---"> ---LINK--- </a>
-        </u>
-      </b>
-    </p>
-    <!--===attachment===-->
-
-  </body>
+</body>
 </html>
