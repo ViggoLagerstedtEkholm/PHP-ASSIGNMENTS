@@ -10,4 +10,3 @@ echo "session-id: " . $_GET["session-id"]. "\n";
 if(isset($_GET["button"])){
   echo "button = " . $_GET["button"];
 }
-?>
