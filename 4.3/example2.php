@@ -10,4 +10,3 @@ echo "session-id: " . $_COOKIE["session_store_cookie"] . "\n";
 if(isset($_GET["button"])){
   echo "button = " . $_GET["button"];
 }
-?>
