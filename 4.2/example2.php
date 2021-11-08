@@ -12,4 +12,3 @@ if(isset($_COOKIE["session_store_cookie"])) {
 if(isset($_GET["button"])){
   echo "button = " . $_GET["button"];
 }
-?>
