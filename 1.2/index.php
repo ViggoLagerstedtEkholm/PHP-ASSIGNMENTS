@@ -1,4 +1,9 @@
 <?php
+/**
+ * This script will print the name of the global variable followed by the value.
+ * @author Viggo Lagerstedt Ekholm
+ */
+
 header('Content-type: text/plain');
 //Create array with both SERVER and ENV variables, we will use these to loop the contents.
 $globalVariables = array(
